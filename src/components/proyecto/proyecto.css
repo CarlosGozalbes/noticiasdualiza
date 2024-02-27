@@ -1,0 +1,97 @@
+
+.hero-container {
+    background-image: url('/images/backgroundproyect.avif');
+    padding: 15px 10rem;
+}
+.proyecto-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+     
+}
+.descripcion-proyecto-container {
+    padding: 15px 10rem;
+}
+.logo-colaborador-hero2 {
+   height: 200px;
+}
+.logo-colaborador-hero {
+    height: 200px;
+ }
+ .logo-colaborador-hero3 {
+    height: 200px;
+ }
+.logo-link {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Optional: Center the image horizontally within its container */
+}
+.descripcion-proyecto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.text-block {
+    width: 48%; /* Adjust this value to leave some space between the text blocks */
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    line-height: 1.6;
+    
+    overflow: hidden;
+}
+
+.leer-mas {
+    align-self: flex-end;
+    
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: blue;
+}
+@media screen and (max-width: 953px) {
+    .hero-container {
+        
+        padding: 15px 1rem;
+        
+      }
+      .descripcion-proyecto-container {
+        
+        padding: 15px 1rem;
+        
+      }
+  }
+
+  @media screen and (max-width: 561px) {
+    .hero-container {
+        
+        padding: 15px 1rem;
+        
+      }
+      .logos{
+        display: flex;
+        flex-direction: column;
+      }
+      .text-container {
+        
+        display: flex;
+        flex-direction: column;
+        
+      }
+      .text-block {
+        width: 100%; /* Adjust this value to leave some space between the text blocks */
+        display: flex;
+        flex-direction: column;
+    }
+    
+  }

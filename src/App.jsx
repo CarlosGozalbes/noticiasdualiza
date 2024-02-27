@@ -1,41 +1,31 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { useState } from 'react'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProtectedRoute from "./components/utils/ProtectedRoute";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
+import ResultadosPage from "./pages/ResultadosPage";
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <HomePage />,
-      errorElement: <HomePage />,
-      children: [
-        {
-          element: <ProtectedRoute redirectPath="/" />,
-          children: [
-            { index: true, element: <HomePage /> },
-            {
-              path: "/productos/:idproduct",
-              element: <HomePage />,
-            },
-            {
-              path: "/payment/",
-              element: <HomePage />,
-            },
-          ],
-        },
-        {
-          path: "/login",
-          element: <HomePage />,
-        },
-      ],
-    },
-  ]);
+  
+  
 
   return (
     <>
-      <RouterProvider router={router} />
+    <Router>
+    <div className={` flex flex-col min-h-screen`}>
+    <Navbar/>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/resultados" element={<ResultadosPage />} />
+        </Routes>
+    <Footer/>
+    </div>
+    </Router>
     </>
-  )
+  );
 }
 
-export default App
+
+   
+
+
+export default App;

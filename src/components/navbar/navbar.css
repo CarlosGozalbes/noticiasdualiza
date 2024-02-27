@@ -1,0 +1,90 @@
+.navbar {
+  background: rgb(235,164,71);
+  background: linear-gradient(0deg, rgba(235,164,71,0.4) 0%, rgba(231,81,41,1) 100%);
+    color: #fff;
+    padding: 15px 10rem;
+    width: 100%;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-toggle {
+    cursor: pointer;
+    display: none;
+  }
+  @media screen and (max-width: 953px) {
+    .navbar {
+        
+        padding: 15px 1rem;
+        
+      }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar-links {
+        order: 1;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 125px;
+      left: 0;
+      background-color: #e75129;
+      width: 100%;
+      text-align: center;
+      gap: 1rem;
+      padding-bottom: 1rem;
+     align-items: start;
+     padding-left: 1rem;
+    }
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+      .navbar-logo {
+        order: 2; /* Logo moves to the top */
+      }
+    
+      .navbar-toggle {
+        order: 1; /* Toggle moves to the middle */
+      }
+      .navbar {
+        
+        padding: 15px 1rem;
+        
+      }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+    .navbar-toggle {
+      display: block;
+      font-size: 3rem;
+    }
+  }
+  

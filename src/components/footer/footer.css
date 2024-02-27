@@ -1,0 +1,13 @@
+.footer {
+    padding: 15px 10rem;  
+    background: rgb(235,164,71);
+    background: linear-gradient(0deg,  rgba(231,81,41,1) 100%,rgba(235,164,71,0) 0%);
+    
+}
+@media screen and (max-width: 953px) {
+    .footer {
+        
+        padding: 15px 1rem;
+        
+      }
+  }

@@ -1,17 +1,20 @@
 
-import Navbar from "../components/Navbar";
-
+import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer/Footer";
+import Proyecto from "../components/proyecto/Proyecto";
 const HomePage = () => {
   
 
 
   return (
     <>
-      <Navbar />
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold my-8">Crud en React con Firebase</h1>
+    
+  
+      <div className=" flex-grow w-full" style={{backgroundColor:"#F2F2F2"}}>
+          <Proyecto/>
+          
+          </div>
       
-      </div>
     </>
   );
 };
