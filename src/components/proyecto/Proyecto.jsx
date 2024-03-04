@@ -1,12 +1,16 @@
 import { useState } from "react";
 
 import "./proyecto.css";
+import { BackgroundBeams } from "../BackgroundBeams";
+import Colaboradores from "../Colaboradores";
+import { Link } from "react-router-dom";
 function Proyecto() {
   const [verProyecto, setVerProyecto] = useState(false);
   const [verProyecto2, setVerProyecto2] = useState(false);
   return (
-    <div className="proyecto-container">
-      <section className="hero-container w-full flex justify-center">
+    <div className="proyecto-container ">
+       
+      <section className="hero-container w-full flex justify-center ">
         <div className="pt-8  max-w-screen-xl text-center lg:pt-16 ">
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">
             Juntos, hacia un futuro más verde y responsable
@@ -17,9 +21,9 @@ function Proyecto() {
             ayuda de Dualiza 2022.
           </p>
           <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <a
-              href="#"
-              className="text-white bg-blue-500 hover:bg-blue-700 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+            <Link
+              to="/mejoratucentro"
+              className="z-10 text-white bg-blue-500 hover:bg-blue-700 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
               ¡Únete al cambio!
               <svg
@@ -34,13 +38,13 @@ function Proyecto() {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
-            <a
-              href="#"
-              className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 hover:text-white  border-gray-700 hover:bg-gray-700 "
+            </Link>
+            <Link
+              to="/noticias"
+              className="z-10 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 hover:text-white  border-gray-700 hover:bg-gray-700 "
             >
               Descubre las ultimas noticias
-            </a>
+            </Link>
           </div>
           <div className="  text-center w-full ">
             <span className="font-semibold  text-gray-400 uppercase">
@@ -75,7 +79,7 @@ function Proyecto() {
           </div>
         </div>
       </section>
-      <div className="descripcion-proyecto-container mb-6">
+      <div className="descripcion-proyecto-container mb-6 ">
         <h1 className="mb-4 my-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">
           Descubre el Proyecto
         </h1>
@@ -164,9 +168,8 @@ function Proyecto() {
         </div>
         <div></div>
       </div>
-      <div className="colaboradores-container">
-
-      </div>
+      <Colaboradores/>
+      <BackgroundBeams />
     </div>
   );
 }

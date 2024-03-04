@@ -1,6 +1,4 @@
 
-import Navbar from "../components/navbar/Navbar";
-import Footer from "../components/footer/Footer";
 import Proyecto from "../components/proyecto/Proyecto";
 const HomePage = () => {
   
@@ -10,9 +8,9 @@ const HomePage = () => {
     <>
     
   
-      <div className=" flex-grow w-full" style={{backgroundColor:"#F2F2F2"}}>
+      <div className=" flex-grow w-full" style={{backgroundColor:"transparent"}}>
           <Proyecto/>
-          
+         
           </div>
       
     </>
